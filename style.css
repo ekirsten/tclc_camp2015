@@ -100,13 +100,14 @@ dd {
 	padding: 25px;
 	background: #697;
 	border-radius: 20px;
+	color: white;
 }
 
 #quiz-score-title {
 	display: block;
 }
 
-#quiz {
+#quiz, #quiz-outro {
 	display: none;
 }
 

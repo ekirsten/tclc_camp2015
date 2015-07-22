@@ -81,6 +81,10 @@ function answerCurrentQuizQuestion() {
 	for (var i = 0; i < answers.length; ++i) {
 		var answer = answers[i];
 		if (answer.checked) {
+			// Clear the answer, in case the user reloads the page.
+			answer.checked = false;
+			// Add to the score. The value (score of the answer) may be 0, in which case the score won't
+			// increase.
 			quizScore += parseInt(answer.getAttribute("value"));
 			break;
 		}
@@ -102,6 +106,8 @@ function answerCurrentQuizQuestion() {
 	} else {
 		// There's no question with id equal to indexOfCurrentQuestion: the quiz is over.
 		document.getElementById("quiz-next").style.setProperty("display", "none", null);
+		// Show the "quiz completed" message.
+		document.getElementById("quiz-outro").style.setProperty("display", "block", null);
 	}
 }
 

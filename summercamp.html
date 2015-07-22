@@ -18,7 +18,7 @@
 			<li onclick="switchToTab(this,         'html-content-tab')">html</li>
 			<li onclick="switchToTab(this,          'css-content-tab')">css</li>
 			<li onclick="switchToTab(this,   'javascript-content-tab')">javascript</li>
-			<li onclick="switchToTab(this,      'example-content-tab')">example</li>
+			<li onclick="switchToTab(this,      'example-content-tab')">quiz example</li>
 			<li onclick="switchToTab(this,        'files-content-tab')">files</li>
 			<li onclick="switchToTab(this,    'resources-content-tab')">further resources</li>
 			<li onclick="switchToTab(this,   'challenges-content-tab')">challenges</li>
@@ -153,7 +153,7 @@
 					<button onclick="beginQuiz()">Let’s get started!</button>
 				</div>
 				<div id="quiz">
-					<div id="quiz-score-box"><span id="quiz-score-title">Score</span><span id="quiz-score">-</span></div>
+					<div id="quiz-score-box"><span id="quiz-score-title">score</span><span id="quiz-score">-</span></div>
 					<ol id="quiz-questions">
 						<li class="question" id="question1">
 							<h3>Which of the following is used to set the color scheme of a website?</h3>
@@ -193,6 +193,9 @@
 					<div id="quiz-next">
 						<button onclick="answerCurrentQuizQuestion()">Submit answer</button>
 					</div>
+				</div>
+				<div id="quiz-outro">
+					<p>Quiz completed!</p>
 				</div>
 			</div>
 
