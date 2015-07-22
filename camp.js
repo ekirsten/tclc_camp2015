@@ -23,7 +23,7 @@ function change_question(question_number, value){
 }
 
 
-var rotating_images = new Array ("img01.png", "img02.jpg", "img03.jpg", "img04.png", "img05.jpg", "img06.jpg");
+var rotating_images = new Array ("img01.png", "img04.png", "img05.jpg", "img06.jpg", "img07.jpg", "img08.jpg");
 
 var i = 0
 
