@@ -1,13 +1,20 @@
+html {
+	height: 100%;
+}
+
 body {
 	background: #9CA url('palms.png') repeat-x fixed bottom;
 	color: black;
 	font-family: 'Tahoma', 'Geneva', sans-serif;
 	width: 67%;
-	margin: 0 auto 150px;
+	height: 100%;
+	margin: 0 auto;
 }
 
-#everything-wrapper {
+#top-and-content-wrapper {
 	box-shadow: 0 0 15px black;
+	min-height: 100%;
+	background: white;
 }
 
 #top-banner {
@@ -45,6 +52,11 @@ ul#top-nav-bar li.selected {
 	border-radius: 3px 10px;
 }
 
+#bottom-copyright-bar {
+	margin: 100px 0 20px;
+	color: white;
+}
+
 #img-rotation {
 	height: 150px;
 	clear: none;
@@ -53,7 +65,6 @@ ul#top-nav-bar li.selected {
 
 
 #main-content {
-	background: white;
 	padding: 30px 50px 100px;
 }
 

@@ -6,227 +6,246 @@
 	<script type="text/javascript" src="camp.js">
 	</script>
 </head>
-<body><div id="everything-wrapper">
-	<div id="top-banner">
-		<img id="img-rotation" src="" />
-		<h2 id="header">TCLC Summer Camp 2015</h2>
-	</div>
-
-	<ul id="top-nav-bar">
-		<li onclick="switchToTab(this, 'introduction-content-tab')" id="introduction-tab">introduction</li>
-		<li onclick="switchToTab(this,         'html-content-tab')">html</li>
-		<li onclick="switchToTab(this,          'css-content-tab')">css</li>
-		<li onclick="switchToTab(this,   'javascript-content-tab')">javascript</li>
-		<li onclick="switchToTab(this,      'example-content-tab')">example</li>
-		<li onclick="switchToTab(this,        'files-content-tab')">files</li>
-		<li onclick="switchToTab(this,    'resources-content-tab')">further resources</li>
-		<li onclick="switchToTab(this,   'challenges-content-tab')">challenges</li>
-	</ul>
-
-	<div id="main-content">
-		<div class="main-content-tab" id="introduction-content-tab">
-			<h2>Three Pillars of Web Design</h2>
-			<p>	Welcome! This site explores the interaction of HTML, CSS, and JavaScript to create more
-			interactive web content.</p>
-
-			<h3>What are we learning?</h3>
-			<p>HTML, CSS and JavaScript are the main building blocks for all webpages. Even as we get into
-			more dynamic sites built by programs, these three pillars remain relevant and important.</p>
-
-			<dl>
-					<dt>HTML</dt>
-					<dd>
-						<p>HTML is the language browsers use to interpret information. No matter what
-						programming language is used to generate a page, the information is conveyed to the
-						browser in terms of HTML.</p>
-					</dd>
-
-					<dt>CSS</dt>
-					<dd>
-						<p>CSS provides the styling information for HTML. It works off of HTML elements; it is
-						the CSS that decides how content should appear.</p>
-						<p>This content here is in a paragraph; if I were to go into the CSS and change the
-						styling for &lt;p&gt; elements, this might look a lot different (give it a try!).</p>
-					</dd>
-
-					<dt>JavaScript</dt>
-					<dd>
-						<p>JavaScript is a scripting language commonly used to add more dynamic features to HTML
-						pages. Nowadays, there are many languages used to generate HTML pages, but JavaScript
-						support is ubiquitous and allows us as users to add dynamic features to systems we don’t
-						have complete control over.<p>
-						<p>In a way, JavaScript is the most easily expunged of the core three – it tells the CSS
-						and HTML what to do, but so can other languages. However, it is so widely supported that
-						it is probably the most useful of the three in influencing functionality across various
-						platforms. It can complete tasks, it can add interactivity, it can work with data and
-						modify static content – and you can be pretty sure it will work no matter where you are
-						on the web, whether on LibGuides or Sirsi or Blackboard.</p>
-					</dd>
-			</ul>
-
-			<h3>Why learn these skills?</h3>
-			<p>Most people are not going to design a website from scratch these days, but you can still
-			use this information in conjunction with pretty much every modern web service you encounter.
-			Knowing these three tools allows you to better customize the systems you use on a daily
-			basis.</p>
-
-			<h3>What should I learn?</h3>
-			<p>You don’t need to memorize every HTML tag or css property and value; what you do need to
-			know is what you can accomplish, the basic syntax, and where to look for more information.</p>
-			<p>Unless your career is web developer, you’re probably going to have to look things up – and
-			that’s okay. We’re librarians, it’s what we do. Knowing where to look and what to look for –
-			that’s the key.</p>
+<body>
+	<div id="top-and-content-wrapper">
+		<div id="top-banner">
+			<img id="img-rotation" src="" />
+			<h2 id="header">TCLC Summer Camp 2015</h2>
 		</div>
 
-		<div class="main-content-tab" id="html-content-tab">
-			<h2>What it does</h2>
-			<p>HTML adds structure to a document. Way back when, it might have been used for styling, but
-			now it pretty much just labels content which is moved around and styled with CSS. There are a
-			lot of built-in features with HTML5 which add increased functions, such as (and especially)
-			video, but at its core HTML remains a language of organization, of sorting. HTML provides the
-			structure – it’s like a middle school teacher.</p>
+		<ul id="top-nav-bar">
+			<li onclick="switchToTab(this, 'introduction-content-tab')" id="introduction-tab">introduction</li>
+			<li onclick="switchToTab(this,         'html-content-tab')">html</li>
+			<li onclick="switchToTab(this,          'css-content-tab')">css</li>
+			<li onclick="switchToTab(this,   'javascript-content-tab')">javascript</li>
+			<li onclick="switchToTab(this,      'example-content-tab')">example</li>
+			<li onclick="switchToTab(this,        'files-content-tab')">files</li>
+			<li onclick="switchToTab(this,    'resources-content-tab')">further resources</li>
+			<li onclick="switchToTab(this,   'challenges-content-tab')">challenges</li>
+		</ul>
 
-			<h2>Why it’s important</h2>
-			<p>We mentioned it before, but still HTML seems oldschool, right? But the fact is, everything
-			communicates in terms of HTML. You can learn the hippest programming language, but if you want
-			to use it to design websites, you need to know how to talk HTML. It is the language of the
-			web, like it or not. Most people simply like it: after all, it’s a clean, simple system; it
-			does little, and you get little in return, but you get all you expected.</p>
+		<div id="main-content">
+			<div class="main-content-tab" id="introduction-content-tab">
+				<h2>Three Pillars of Web Design</h2>
+				<p>	Welcome! This site explores the interaction of HTML, CSS, and JavaScript to create more
+				interactive web content.</p>
 
-			<ul>
-				<li>elements</li>
-				<li>attributes</li>
-				<li>nesting and closing</li>
-				<li>essential tags</li>
-			</ul>
-		</div>
+				<h3>What are we learning?</h3>
+				<p>HTML, CSS and JavaScript are the main building blocks for all webpages. Even as we get
+				into more dynamic sites built by programs, these three pillars remain relevant and
+				important.</p>
 
-		<div class="main-content-tab" id="css-content-tab">
-			<h2>What it does</h2>
-			<p>CSS or cascading style sheets is the design module of the web. It’s where you add color,
-			control font, modify visibility, etc. There are three ways to go about style: internal,
-			external, and inline.</p>
+				<dl>
+						<dt>HTML</dt>
+						<dd>
+							<p>HTML is the language browsers use to interpret information. No matter what
+							programming language is used to generate a page, the information is conveyed to the
+							browser in terms of HTML.</p>
+						</dd>
 
-			<dl>
-				<dt>inline</dt>
-				<dd>
-					<p>In-line styling is the least supported. It produces style applied to individual HTML
-					element. It is tedious and difficult, but sometimes necessary when you can’t control style
-					on a larger scale.</p>
-				</dd>
+						<dt>CSS</dt>
+						<dd>
+							<p>CSS provides the styling information for HTML. It works off of HTML elements; it is
+							the CSS that decides how content should appear.</p>
+							<p>This content here is in a paragraph; if I were to go into the CSS and change the
+							styling for &lt;p&gt; elements, this might look a lot different (give it a try!).</p>
+						</dd>
 
-				<dt>internal style sheets</dt>
-				<dd>
-					<p>Internal style sheets apply styles on a page by page basis. They are often generated by
-					programs – that is, they are common when websites not written by hand. They have the
-					advantage over in-line styling of concentrating style information, but fall behind
-					external style sheets in that they need to be updated page by page.</p>
-				</dd>
-			</dl>
-		</div>
+						<dt>JavaScript</dt>
+						<dd>
+							<p>JavaScript is a scripting language commonly used to add more dynamic features to
+							HTML pages. Nowadays, there are many languages used to generate HTML pages, but
+							JavaScript support is ubiquitous and allows us as users to add dynamic features to
+							systems we don’t have complete control over.<p>
+							<p>In a way, JavaScript is the most easily expunged of the core three – it tells the
+							CSS and HTML what to do, but so can other languages. However, it is so widely
+							supported that it is probably the most useful of the three in influencing
+							functionality across various platforms. It can complete tasks, it can add
+							interactivity, it can work with data and modify static content – and you can be pretty
+							sure it will work no matter where you are on the web, whether on LibGuides or Sirsi or
+							Blackboard.</p>
+						</dd>
+				</ul>
 
-		<div class="main-content-tab" id="javascript-content-tab">
-			<h2>what it does</h2>
+				<h3>Why learn these skills?</h3>
+				<p>Most people are not going to design a website from scratch these days, but you can still
+				use this information in conjunction with pretty much every modern web service you encounter.
+				Knowing these three tools allows you to better customize the systems you use on a daily
+				basis.</p>
 
-		Javascript is often used to add dynamic elements to web content. It does this by altering the html and css. Javascript isn't the only language that can do this - you could replace the javascript, but always need to speak to the browser in html and css. It is, however, the most common and is supported by the browser. Other languages you could use to modify content might have requirements on the server side, which makes them harder to use across multiple platforms. 
-
-		<h2>features and events</h2>
-		Javascript can be loaded immediately with the page or can be triggered based on a click. We can see examples of each within this html document. Javascript operates using functions, which are basically a set of instructions to carry out a certain task. When you click in the navigation bar, you set off a function which hides some content and shows other content. The pictures on top are rotated by a function which changes the image source after a certain interval. 
-		</div>
-
-		<div class="main-content-tab" id="example-content-tab">
-			<div id="quiz-intro">
-				<button onclick="beginQuiz()">Let’s get started!</button>
+				<h3>What should I learn?</h3>
+				<p>You don’t need to memorize every HTML tag or css property and value; what you do need to
+				know is what you can accomplish, the basic syntax, and where to look for more
+				information.</p>
+				<p>Unless your career is web developer, you’re probably going to have to look things up –
+				and that’s okay. We’re librarians, it’s what we do. Knowing where to look and what to look
+				for – that’s the key.</p>
 			</div>
-			<div id="quiz">
-				<div id="quiz-score-box"><span id="quiz-score-title">Score</span><span id="quiz-score">-</span></div>
-				<ol id="quiz-questions">
-					<li class="question" id="question1">
-						<h3>Which of the following is used to set the color scheme of a website?</h3>
-						<ul class="radios">
-							<li><input type="radio" name="question1-answer" id="question1-answer1" value="0" /><label for="question1-answer1">html</label></li>
-							<li><input type="radio" name="question1-answer" id="question1-answer2" value="1" /><label for="question1-answer2">css</label></li>
-							<li><input type="radio" name="question1-answer" id="question1-answer3" value="0" /><label for="question1-answer3">javascript</label></li>
-							<li><input type="radio" name="question1-answer" id="question1-answer4" value="0" /><label for="question1-answer4">php</label></li>
-							<li><input type="radio" name="question1-answer" id="question1-answer5" value="0" /><label for="question1-answer5">none of the above</label></li>
-						</ul>
-					</li>
 
-					<li class="question" id="question2">
-						<h3>Which represents a correct HTML tag?</h3>
-						<ul class="radios">
-							<li><input type="radio" name="question2-answer" id="question2-answer1" value="1" /><label for="question2-answer1">body</label></li>
-							<li><input type="radio" name="question2-answer" id="question2-answer2" value="0" /><label for="question2-answer2">heading</label></li>
-							<li><input type="radio" name="question2-answer" id="question2-answer3" value="0" /><label for="question2-answer3">javascript</label></li>
-							<li><input type="radio" name="question2-answer" id="question2-answer4" value="0" /><label for="question2-answer4">footer</label></li>
-							<li><input type="radio" name="question2-answer" id="question2-answer5" value="0" /><label for="question2-answer5">none of the above</label></li>
-						</ul>
-					</li>
+			<div class="main-content-tab" id="html-content-tab">
+				<h2>What it does</h2>
+				<p>HTML adds structure to a document. Way back when, it might have been used for styling,
+				but now it pretty much just labels content which is moved around and styled with CSS. There
+				are a lot of built-in features with HTML5 which add increased functions, such as (and
+				especially) video, but at its core HTML remains a language of organization, of sorting. HTML
+				provides the structure – it’s like a middle school teacher.</p>
 
-					<li class="question" id="question3">
-						<h3>What is the difference between Java and JavaScript?</h3>
-						<ul class="radios">
-							<li><input type="radio" name="question3-answer" id="question3-answer1" value="0" /><label for="question3-answer1">absolutely nothing</label></li>
-							<li><input type="radio" name="question3-answer" id="question3-answer2" value="0" /><label for="question3-answer2">formal name vs. casual name</label></li>
-							<li><input type="radio" name="question3-answer" id="question3-answer3" value="0" /><label for="question3-answer3">java is better</label></li>
-							<li><input type="radio" name="question3-answer" id="question3-answer4" value="0" /><label for="question3-answer4">javascript is better</label></li>
-							<li><input type="radio" name="question3-answer" id="question3-answer5" value="0" /><label for="question3-answer5">everything!</label></li>
-							<li><input type="radio" name="question3-answer" id="question3-answer6" value="1" /><label for="question3-answer6">unrelated, but both programming languages</li>
-						</ul>
-					</li>
-				</ol>
+				<h2>Why it’s important</h2>
+				<p>We mentioned it before, but still HTML seems oldschool, right? But the fact is,
+				everything communicates in terms of HTML. You can learn the hippest programming language,
+				but if you want to use it to design websites, you need to know how to talk HTML. It is the
+				language of the web, like it or not. Most people simply like it: after all, it’s a clean,
+				simple system; it does little, and you get little in return, but you get all you
+				expected.</p>
 
-				<div id="quiz-next">
-					<button onclick="answerCurrentQuizQuestion()">Submit answer</button>
+				<ul>
+					<li>elements</li>
+					<li>attributes</li>
+					<li>nesting and closing</li>
+					<li>essential tags</li>
+				</ul>
+			</div>
+
+			<div class="main-content-tab" id="css-content-tab">
+				<h2>What it does</h2>
+				<p>CSS or cascading style sheets is the design module of the web. It’s where you add color,
+				control font, modify visibility, etc. There are three ways to go about style: internal,
+				external, and inline.</p>
+
+				<dl>
+					<dt>inline</dt>
+					<dd>
+						<p>In-line styling is the least supported. It produces style applied to individual HTML
+						element. It is tedious and difficult, but sometimes necessary when you can’t control
+						style on a larger scale.</p>
+					</dd>
+
+					<dt>internal style sheets</dt>
+					<dd>
+						<p>Internal style sheets apply styles on a page by page basis. They are often generated
+						by programs – that is, they are common when websites not written by hand. They have the
+						advantage over in-line styling of concentrating style information, but fall behind
+						external style sheets in that they need to be updated page by page.</p>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="main-content-tab" id="javascript-content-tab">
+				<h2>What it does</h2>
+				<p>JavaScript is often used to add dynamic elements to web content; it does this by altering
+				the HTML and CSS. JavaScript isn't the only language that can do this: you could replace the
+				JavaScript, but always need to speak to the browser in HTML and CSS. It is, however, the
+				most common and is supported by the browser. Other languages you could use to modify content
+				might have requirements on the server side, which makes them harder to use across multiple
+				platforms.</p>
+
+				<h2>Features and events</h2>
+				<p>JavaScript can be loaded immediately with the page or can be triggered based on a click.
+				We can see examples of each within this html document.</p>
+				<p>JavaScript operates using functions, which are basically a set of instructions to carry
+				out a certain task. When you click in the navigation bar, you set off a function which hides
+				some content and shows other content. The pictures on top are rotated by a function which
+				changes the image source after a certain interval.</p>
+			</div>
+
+			<div class="main-content-tab" id="example-content-tab">
+				<div id="quiz-intro">
+					<button onclick="beginQuiz()">Let’s get started!</button>
+				</div>
+				<div id="quiz">
+					<div id="quiz-score-box"><span id="quiz-score-title">Score</span><span id="quiz-score">-</span></div>
+					<ol id="quiz-questions">
+						<li class="question" id="question1">
+							<h3>Which of the following is used to set the color scheme of a website?</h3>
+							<ul class="radios">
+								<li><input type="radio" name="question1-answer" id="question1-answer1" value="0" /><label for="question1-answer1">html</label></li>
+								<li><input type="radio" name="question1-answer" id="question1-answer2" value="1" /><label for="question1-answer2">css</label></li>
+								<li><input type="radio" name="question1-answer" id="question1-answer3" value="0" /><label for="question1-answer3">javascript</label></li>
+								<li><input type="radio" name="question1-answer" id="question1-answer4" value="0" /><label for="question1-answer4">php</label></li>
+								<li><input type="radio" name="question1-answer" id="question1-answer5" value="0" /><label for="question1-answer5">none of the above</label></li>
+							</ul>
+						</li>
+
+						<li class="question" id="question2">
+							<h3>Which represents a correct HTML tag?</h3>
+							<ul class="radios">
+								<li><input type="radio" name="question2-answer" id="question2-answer1" value="1" /><label for="question2-answer1">body</label></li>
+								<li><input type="radio" name="question2-answer" id="question2-answer2" value="0" /><label for="question2-answer2">heading</label></li>
+								<li><input type="radio" name="question2-answer" id="question2-answer3" value="0" /><label for="question2-answer3">javascript</label></li>
+								<li><input type="radio" name="question2-answer" id="question2-answer4" value="0" /><label for="question2-answer4">footer</label></li>
+								<li><input type="radio" name="question2-answer" id="question2-answer5" value="0" /><label for="question2-answer5">none of the above</label></li>
+							</ul>
+						</li>
+
+						<li class="question" id="question3">
+							<h3>What is the difference between Java and JavaScript?</h3>
+							<ul class="radios">
+								<li><input type="radio" name="question3-answer" id="question3-answer1" value="0" /><label for="question3-answer1">absolutely nothing</label></li>
+								<li><input type="radio" name="question3-answer" id="question3-answer2" value="0" /><label for="question3-answer2">formal name vs. casual name</label></li>
+								<li><input type="radio" name="question3-answer" id="question3-answer3" value="0" /><label for="question3-answer3">java is better</label></li>
+								<li><input type="radio" name="question3-answer" id="question3-answer4" value="0" /><label for="question3-answer4">javascript is better</label></li>
+								<li><input type="radio" name="question3-answer" id="question3-answer5" value="0" /><label for="question3-answer5">everything!</label></li>
+								<li><input type="radio" name="question3-answer" id="question3-answer6" value="1" /><label for="question3-answer6">unrelated, but both programming languages</li>
+							</ul>
+						</li>
+					</ol>
+
+					<div id="quiz-next">
+						<button onclick="answerCurrentQuizQuestion()">Submit answer</button>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="main-content-tab" id="files-content-tab">
-			<p>All sources and images for this website are available on <a
-			href="https://github.com/ekirsten/tclc_camp2015">Elena's tclc_camp2015 GitHub
-			repository</a>.</p>
-			<p>GitHub offers a link to download the sources in a single ZIP file, near the bottom-right
-			corner of the repository page.</p>
-		</div>
+			<div class="main-content-tab" id="files-content-tab">
+				<p>All sources and images for this website are available on <a
+				href="https://github.com/ekirsten/tclc_camp2015">Elena's tclc_camp2015 GitHub
+				repository</a>.</p>
+				<p>GitHub offers a link to download the sources in a single ZIP file, near the bottom-right
+				corner of the repository page.</p>
+			</div>
 
-		<div class="main-content-tab" id="resources-content-tab">
-			<ul>
-				<li>Codecademy</li>
-				<li>Udacity</li>
-				<li>W3Schools</li>
-			</ul>
-		</div>
+			<div class="main-content-tab" id="resources-content-tab">
+				<ul>
+					<li>Codecademy</li>
+					<li>Udacity</li>
+					<li>W3Schools</li>
+				</ul>
+			</div>
 
-		<div class="main-content-tab" id="challenges-content-tab">
-			<p>Here are a few challenges to test your skills:</p>
-			<ol>
-				<li>Change the colors of all the fonts</li>
-				<li>Add a background image</li>
-				<li>Add five questions to the quiz, make sure they have the proper class and id</li>
-				<li>Add a border to all images using CSS</li>
-				<li>Add a class with the name “red” and make the background color for that class red and the
-					font color white</li>
-				<li>Find a font family online and change it in the CSS for the &lt;h1&gt; element</li>
-				<li>Modify the CSS so that the color scheme is variants of blue</li>
-				<li>Add a page to the navigation bar (remember to add in JavaScript as well)</li>
-				<li>Create your own website with simple html</li>
-				<li>Add JavaScript to your website</li>
-				<li>Add CSS to your website</li>
-				<li>Add a border shadow to a div in CSS</li>
-				<li>Stretch the top banner to the whole width of the screen</li>
-				<li>Embed external content (e.g. youtube video or libguides widgets) into your site</li>
-				<li>Share your files on GitHub</li>
-				<li>Create a page where all quiz questions are visible</li>
-				<li>Change the timing on the pictures and change the picture sources</li>
-				<li>Add an input drop-down where the color scheme changes based on which value is
-					selected</li>
-				<li>Write JavaScript to greet site visitors based on the hour of the day</li>
-				<li>Create a custom CSS file for your instance of: LibGuides, Canvas, Enterprise, etc.</li>
-			</ol>
-		</div>
+			<div class="main-content-tab" id="challenges-content-tab">
+				<p>Here are a few challenges to test your skills:</p>
+				<ol>
+					<li>Change the colors of all the fonts</li>
+					<li>Add a background image</li>
+					<li>Add five questions to the quiz, make sure they have the proper class and id</li>
+					<li>Add a border to all images using CSS</li>
+					<li>Add a class with the name “red” and make the background color for that class red and
+						the font color white</li>
+					<li>Find a font family online and change it in the CSS for the &lt;h1&gt; element</li>
+					<li>Modify the CSS so that the color scheme is variants of blue</li>
+					<li>Add a page to the navigation bar (remember to add in JavaScript as well)</li>
+					<li>Create your own website with simple html</li>
+					<li>Add JavaScript to your website</li>
+					<li>Add CSS to your website</li>
+					<li>Add a border shadow to a div in CSS</li>
+					<li>Stretch the top banner to the whole width of the screen</li>
+					<li>Embed external content (e.g. youtube video or libguides widgets) into your site</li>
+					<li>Share your files on GitHub</li>
+					<li>Create a page where all quiz questions are visible</li>
+					<li>Change the timing on the pictures and change the picture sources</li>
+					<li>Add an input drop-down where the color scheme changes based on which value is
+						selected</li>
+					<li>Write JavaScript to greet site visitors based on the hour of the day</li>
+					<li>Create a custom CSS file for your instance of: LibGuides, Canvas, Enterprise,
+						etc.</li>
+				</ol>
+			</div>
 
-		<div style="clear: both"></div>
+			<div style="clear: both"></div>
+		</div>
 	</div>
-</div></body>
+	<div id="bottom-copyright-bar">
+		Copyright notice
+	</div>
+</body>
 </html>
