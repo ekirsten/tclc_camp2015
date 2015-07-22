@@ -11,10 +11,10 @@ function switchToTab(idOfNewTab) {
 	// If there is a visible tab (i.e. this is not the first time that this function is executing),
 	// hide it.
 	if (currentlyVisibleTab != null) {
-		currentlyVisibleTab.style.display = "none";
+		currentlyVisibleTab.style.setProperty("display", "none", null);
 	}
 	// Show the new tab.
-	newTab.style.display = "block";
+	newTab.style.setProperty("display", "block", null);
 	// Remember that newTab is now visible.
 	currentlyVisibleTab = newTab;
 }
@@ -30,7 +30,7 @@ var nextDisplayedImage = 0;
 // This function changes the image displayed on the top-right corner.
 function rotateSummerImage() {
 	// Dynamically change the displayed image.
-	document.getElementById("img-rotation").src = listOfRotatingImages[nextDisplayedImage];
+	document.getElementById("img-rotation").setAttribute("src", listOfRotatingImages[nextDisplayedImage]);
 	// The next call to this function will switch to the next image.
 	nextDisplayedImage += 1;
 	// If nextImageToShow has reached the size of the array, start back from image 0, which is the
