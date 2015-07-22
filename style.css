@@ -53,8 +53,21 @@ ul#top-nav-bar li.selected {
 }
 
 #bottom-copyright-bar {
-	margin: 100px 0 20px;
+	margin: 80px 0 0 0;
+	padding: 20px;
 	color: white;
+	text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+	font-size: 80%;
+	text-align: center;
+}
+#bottom-copyright-bar a {
+	color: white;
+}
+#bottom-copyright-bar a:link {
+	text-decoration: none;
+}
+#bottom-copyright-bar a:hover {
+	text-decoration: underline;
 }
 
 #img-rotation {
