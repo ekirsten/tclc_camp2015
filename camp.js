@@ -6,13 +6,14 @@ var currentlyVisibleTab = null;
 
 // This function hides the currentlyVisibleTab and makes visible the tab whose id is idOfNewTab.
 function switchToTab(idOfNewTab) {
-	// Retrieve the new tab HTML element.
-	var newTab = document.getElementById(idOfNewTab);
 	// If there is a visible tab (i.e. this is not the first time that this function is executing),
 	// hide it.
 	if (currentlyVisibleTab != null) {
 		currentlyVisibleTab.style.setProperty("display", "none", null);
 	}
+
+	// Retrieve the new tab HTML element.
+	var newTab = document.getElementById(idOfNewTab);
 	// Show the new tab.
 	newTab.style.setProperty("display", "block", null);
 	// Remember that newTab is now visible.
@@ -45,19 +46,54 @@ function rotateSummerImage() {
 // Code for the quiz
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var score = 0;
+var indexOfCurrentQuestion;
+var quizScore = 0;
 
-function change_question(question_number, value) {
-	var elements = document.getElementsByClassName('questions');
-	for(var i=0; i<elements.length; i++) { 
-  		elements[i].style.display='none'};
-  	document.getElementById(question_number).style.display="block";
-  	document.getElementById(question_number).style.color="blue";
+// This function starts the quiz by hiding the "start quiz" button and showing the first question.
+function beginQuiz() {
+	// Otherwise there's no current question, so the user just started the quiz. In this case we
+	// hide the "start quiz" button and show the first question.
+	document.getElementById("quiz-intro").style.setProperty("display", "none", null);
+	// Show the rest of the quiz.
+	document.getElementById("quiz"      ).style.setProperty("display", "block", null);
 
-  	if (value === "true"){
-  		score+=1;
-  	document.getElementById(score).innerHTML= score;
-  	}
+	// Move to the first question.
+	indexOfCurrentQuestion = 1;
+
+	// Retrieve the new question HTML element and show it.
+	document.getElementById("question" + indexOfCurrentQuestion).style.setProperty("display", "block", null);
+}
+
+// This function hides the question whose index is indexOfCurrentQuestion, updates the
+// score, and makes visible the question whose index is indexOfCurrentQuestion + 1.
+function answerCurrentQuizQuestion() {
+	// Get the selected (checked) answer and update the score accordingly.
+	var answers = document.getElementsByName("question" + indexOfCurrentQuestion + "-answer");
+	for (var i = 0; i < answers.length; ++i) {
+		var answer = answers[i];
+		if (answer.checked) {
+			quizScore += parseInt(answer.getAttribute("value"));
+			break;
+		}
+	}
+	document.getElementById("quiz-score").innerHTML = quizScore;
+
+	// Retrieve the HTML element containing the answered question.
+	var oldQuestion = document.getElementById("question" + indexOfCurrentQuestion);
+	// Hide the answered question.
+	oldQuestion.style.setProperty("display", "none", null);
+
+	// Move to the next question.
+	++indexOfCurrentQuestion;
+
+	// Retrieve the new question HTML element and show it.
+	var newQuestion = document.getElementById("question" + indexOfCurrentQuestion);
+	if (newQuestion != null) {
+		newQuestion.style.setProperty("display", "block", null);
+	} else {
+		// There's no question with id equal to indexOfCurrentQuestion: the quiz is over.
+		document.getElementById("quiz-next").style.setProperty("display", "none", null);
+	}
 }
 
 

@@ -66,3 +66,44 @@ dt {
 dd {
 	margin: 0 0 0 20px;
 }
+
+
+#quiz-score-box {
+	float: right;
+	font-size: 50px;
+	text-align: center;
+	padding: 25px;
+	background: #697;
+	border-radius: 20px;
+}
+
+#quiz-score-title {
+	display: block;
+}
+
+#quiz {
+	display: none;
+}
+
+#quiz-intro button,
+#quiz-next button {
+	font-size: 14px;
+}
+
+#quiz .question {
+	display: none;
+}
+
+#quiz-questions {
+	list-style-type: none;
+	padding: 0;
+}
+
+#quiz-questions ul.radios {
+	list-style-type: none;
+	padding: 0;
+}
+
+#quiz-questions ul.radios label {
+	margin-left: 5px;
+}

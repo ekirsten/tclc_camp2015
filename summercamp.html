@@ -130,47 +130,51 @@
 		</div>
 
 		<div class="main-content-tab" id="example-content-tab">
-			<h2><a onclick="change_question('question_one')">Let’s get started!</a></h2>
-			<div id="quiz_wrapper">
-					<ol><div id="question_one" class="questions"><li>Which of the following is used to set the color scheme of a website?</li>
-
-
-					<input type="radio" name="question1" value="false">html</input><br />
-					<input type="radio" name="question1" value="true">css</input><br />
-					<input type="radio" name="question1" value="false">javascript</input><br />
-					<input type="radio" name="question1" value="false">php</input><br />
-					<input type="radio" name="question1" value="false">none of the above</input><br />
-
-					<a onclick="change_question('questiontwo')">submit answer</a>
-
-					</div>
-
-
-					<div id="questiontwo" class="questions" style="display:none;"><li>Which represents a correct html tag?</li>
-
-						<input type="radio">html</input><br />
-						<input type="radio">css</input><br />
-						<input type="radio">javascript</input><br />
-						<input type="radio">php</input><br />
-						<input type="radio">none of the above</input><br />
-
-					<div>
-
-					<div id="question_three" class="questions"><li>What is the difference between java and javascript?</li>
-
-						<form>
-							<input type="radio">absolutely nothing</input><br />
-							<input type="radio">formal name vs. casual name</input><br />
-							<input type="radio">java is better</input><br />
-							<input type="radio">javascript is better</input><br />
-							<input type="radio">everything!</input><br />
-							<input type="radio">unrelated, but both programming languages</input><br />	</form>
-					</div>
-
-					</ol>
-
+			<div id="quiz-intro">
+				<button onclick="beginQuiz()">Let’s get started!</button>
 			</div>
-			<div id="score">Score:</div>
+			<div id="quiz">
+				<div id="quiz-score-box"><span id="quiz-score-title">Score</span><span id="quiz-score">-</span></div>
+				<ol id="quiz-questions">
+					<li class="question" id="question1">
+						<h3>Which of the following is used to set the color scheme of a website?</h3>
+						<ul class="radios">
+							<li><input type="radio" name="question1-answer" id="question1-answer1" value="0" /><label for="question1-answer1">html</label></li>
+							<li><input type="radio" name="question1-answer" id="question1-answer2" value="1" /><label for="question1-answer2">css</label></li>
+							<li><input type="radio" name="question1-answer" id="question1-answer3" value="0" /><label for="question1-answer3">javascript</label></li>
+							<li><input type="radio" name="question1-answer" id="question1-answer4" value="0" /><label for="question1-answer4">php</label></li>
+							<li><input type="radio" name="question1-answer" id="question1-answer5" value="0" /><label for="question1-answer5">none of the above</label></li>
+						</ul>
+					</li>
+
+					<li class="question" id="question2">
+						<h3>Which represents a correct HTML tag?</h3>
+						<ul class="radios">
+							<li><input type="radio" name="question2-answer" id="question2-answer1" value="1" /><label for="question2-answer1">html</label></li>
+							<li><input type="radio" name="question2-answer" id="question2-answer2" value="0" /><label for="question2-answer2">css</label></li>
+							<li><input type="radio" name="question2-answer" id="question2-answer3" value="0" /><label for="question2-answer3">javascript</label></li>
+							<li><input type="radio" name="question2-answer" id="question2-answer4" value="0" /><label for="question2-answer4">php</label></li>
+							<li><input type="radio" name="question2-answer" id="question2-answer5" value="0" /><label for="question2-answer5">none of the above</label></li>
+						</ul>
+					</li>
+
+					<li class="question" id="question3">
+						<h3>What is the difference between Java and JavaScript?</h3>
+						<ul class="radios">
+							<li><input type="radio" name="question3-answer" id="question3-answer1" value="0" /><label for="question3-answer1">absolutely nothing</label></li>
+							<li><input type="radio" name="question3-answer" id="question3-answer2" value="0" /><label for="question3-answer2">formal name vs. casual name</label></li>
+							<li><input type="radio" name="question3-answer" id="question3-answer3" value="0" /><label for="question3-answer3">java is better</label></li>
+							<li><input type="radio" name="question3-answer" id="question3-answer4" value="0" /><label for="question3-answer4">javascript is better</label></li>
+							<li><input type="radio" name="question3-answer" id="question3-answer5" value="0" /><label for="question3-answer5">everything!</label></li>
+							<li><input type="radio" name="question3-answer" id="question3-answer6" value="1" /><label for="question3-answer6">unrelated, but both programming languages</li>
+						</ul>
+					</li>
+				</ol>
+
+				<div id="quiz-next">
+					<button onclick="answerCurrentQuizQuestion()">Submit answer</button>
+				</div>
+			</div>
 		</div>
 
 		<div class="main-content-tab" id="files-content-tab">
@@ -211,6 +215,8 @@
 				<li>Create a custom css file for your instance of : libguides, canvas, enterprise, etc.
 			</ol>
 		</div>
+
+		<div style="clear: both"></div>
 	</div>
 </div></body>
 </html>
