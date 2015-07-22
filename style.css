@@ -6,6 +6,10 @@ body {
 	margin: 0 auto 150px;
 }
 
+#everything-wrapper {
+	box-shadow: 0 0 15px black;
+}
+
 #top-banner {
 	overflow: hidden;
 	background-color: #697;
@@ -15,29 +19,29 @@ body {
 	margin: 40px;
 	font: bold 44px 'Tahoma', 'Geneva', sans-serif;
 	text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black;
-	color: #FFFFFF;
+	color: white;
 }
 
 
 ul#top-nav-bar {
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 5px;
 	overflow: hidden;
-	background-color: #426104;
+	background-color: #243;
+	color: #9CA;
 }
 ul#top-nav-bar li {
 	float: left;
 	display: block;
-	background-color: #426104;
-	color: #A8CA65;
 	border: 1px;
-	padding: 5px /*top & bottom*/ 25px /*right & left */;
+	padding: 5px /*top & bottom*/ 20px /*right & left */;
 	cursor: pointer;
 }
 ul#top-nav-bar li:hover {
-	background-color: #A8CA65;
-	color: #426104;
+	background-color: #9CA;
+	color: black;
+	border-radius: 3px 10px;
 }
 
 #img-rotation {
@@ -48,9 +52,8 @@ ul#top-nav-bar li:hover {
 
 
 #main-content {
-	/*background: linear-gradient(#000 0, #777 3px, #888 5px, #AAA 10px, #CCC 15px, #EEE 25px, #FFF 40px);*/
 	background: white;
-	padding: 10px;
+	padding: 30px 50px 100px;
 }
 
 .main-content-tab {
