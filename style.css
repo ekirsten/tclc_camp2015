@@ -12,7 +12,7 @@ body {
 
 #top-banner {
 	overflow: hidden;
-	background-color: #697;
+	background: linear-gradient(#5AD, #697);
 	height: 150px;
 }
 #header {
