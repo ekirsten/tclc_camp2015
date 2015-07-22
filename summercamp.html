@@ -1,119 +1,107 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="text/javascript" src="camp.js">
-
 	</script>
 </head>
-<body onload="slideshow_summer()">
-<div id="wrapper">
-	<div id="top-wrapper">
-		<div id="top_banner"><div id="header"><h2>TCLC Summer Camp 2015</h2></div> <img id="img_rotation" src="" height="150px"></div>
-		<div id="top_nav">
-			<ul class="horiz_nav"><li><a onclick="switchvalues('introduction')">introduction</a></li>
-			<li><a onclick="switchvalues('html')">html</a></li>
-			<li><a onclick="switchvalues('css')">css</a></li>
-			<li><a onclick="switchvalues('javascript')">javascript</a></li>
-			<li><a onclick="switchvalues('example')">example</a></li>
-			<li><a onclick="switchvalues('files')">files</a></li>
-			<li><a onclick="switchvalues('resources')">further resources</a></li>
-			<li><a onclick="switchvalues('challenges')">challenges</a></li>
+<body>
+	<div id="top-banner">
+		<img id="img-rotation" src="" height="150px" />
+		<h2 id="header">TCLC Summer Camp 2015</h2>
+	</div>
+
+	<ul id="top-nav-bar">
+		<li onclick="switchToTab('introduction-content-tab')">introduction</li>
+		<li onclick="switchToTab(        'html-content-tab')">html</li>
+		<li onclick="switchToTab(         'css-content-tab')">css</li>
+		<li onclick="switchToTab(  'javascript-content-tab')">javascript</li>
+		<li onclick="switchToTab(     'example-content-tab')">example</li>
+		<li onclick="switchToTab(       'files-content-tab')">files</li>
+		<li onclick="switchToTab(   'resources-content-tab')">further resources</li>
+		<li onclick="switchToTab(  'challenges-content-tab')">challenges</li>
+	</ul>
+
+	<div id="main-content">
+		<div class="main-content-tab" id="introduction-content-tab">
+			<p>	Welcome! This site explores the interaction of html, css, and javascript to create more interactive web content. </p>
+			<p> New paragraph here</p>
+		</div>
+
+		<div class="main-content-tab" id="html-content-tab">
+			some stuff about html
+		</div>
+
+		<div class="main-content-tab" id="css-content-tab">
+			some stuff about css
+		</div>
+
+		<div class="main-content-tab" id="javascript-content-tab">
+			some stuff about javascript
+		</div>
+
+		<div class="main-content-tab" id="example-content-tab">
+			<h2><a onclick="change_question('question_one')">Let's get started!</a></h2>
+			<div id="quiz_wrapper">
+					<ol><div id="question_one" class="questions"><li>Which of the following is used to set the color scheme of a website?</li>
+
+
+					<input type="radio" name="question1" value="false">html</input><br />
+					<input type="radio" name="question1" value="true">css</input><br />
+					<input type="radio" name="question1" value="false">javascript</input><br />
+					<input type="radio" name="question1" value="false">php</input><br />
+					<input type="radio" name="question1" value="false">none of the above</input><br />
+
+					<a onclick="change_question('questiontwo')">submit answer</a>
+
+					</div>
+
+
+					<div id="questiontwo" class="questions" style="display:none;"><li>Which represents a correct html tag?</li>
+
+						<input type="radio">html</input><br />
+						<input type="radio">css</input><br />
+						<input type="radio">javascript</input><br />
+						<input type="radio">php</input><br />
+						<input type="radio">none of the above</input><br />
+
+					<div>
+
+					<div id="question_three" class="questions"><li>What is the difference between java and javascript?</li>
+
+						<form>
+							<input type="radio">absolutely nothing</input><br />
+							<input type="radio">formal name vs. casual name</input><br />
+							<input type="radio">java is better</input><br />
+							<input type="radio">javascript is better</input><br />
+							<input type="radio">everything!</input><br />
+							<input type="radio">unrelated, but both programming languages</input><br />	</form>
+					</div>
+
+					</ol>
+
+			</div>
+			<div id="score">Score:</div>
+		</div>
+
+		<div class="main-content-tab" id="files-content-tab">
+			file<br />
+			file 2<br />
+			file 3
+		</div>
+
+		<div class="main-content-tab" id="resources-content-tab">
+			<ul>
+				<li>Codecademy</li>
+				<li>Udacity</li>
+				<li>W3Schools</li>
 			</ul>
 		</div>
-	</div>
 
-
-<div id="main_content">
-
-	<div id="introduction">
-
-		<p>	Welcome! This site explores the interaction of html, css, and javascript to create more interactive web content. </p>
-		<p> New paragraph here</p>
-	</div>
-
-	<div id="html">
-
-		some stuff about html</div>
-	<div id="css">
-
-		some stuff about css</div>
-
-	<div id="javascript">
-		some stuff about javascript</div>
-
-	<div id="example">
-
-		<h2><a onclick="change_question('question_one')">Let's get started!</a></h2>
-
-		<div id="quiz_wrapper">
-
-				<ol><div id="question_one" class="questions"><li>Which of the following is used to set the color scheme of a website?</li>
-
-		
-				<input type="radio" name="question1" value="false">html</input><br />
-				<input type="radio" name="question1" value="true">css</input><br />
-				<input type="radio" name="question1" value="false">javascript</input><br />
-				<input type="radio" name="question1" value="false">php</input><br />
-				<input type="radio" name="question1" value="false">none of the above</input><br />
-
-				<a onclick="change_question('questiontwo')">submit answer</a>
-
-				</div>
-		
-
-				<div id="questiontwo" class="questions" style="display:none;"><li>Which represents a correct html tag?</li>
-
-					<input type="radio">html</input><br />
-					<input type="radio">css</input><br />
-					<input type="radio">javascript</input><br />
-					<input type="radio">php</input><br />
-					<input type="radio">none of the above</input><br />
-
-				<div>	
-			
-				<div id="question_three" class="questions"><li>What is the difference between java and javascript?</li>
-
-					<form>
-						<input type="radio">absolutely nothing</input><br />
-						<input type="radio">formal name vs. casual name</input><br />
-						<input type="radio">java is better</input><br />
-						<input type="radio">javascript is better</input><br />
-						<input type="radio">everything!</input><br />
-						<input type="radio">unrelated, but both programming languages</input><br />	</form>
-				</div>
-
-		
-
-
-				</ol>
+		<div class="main-content-tab" id="challenges-content-tab">
 
 		</div>
-		<div id="score">Score:</div>
-
-
-
 	</div>
-
-
-<div id="files">
-
-file<br />
-file 2<br />
-file 3</div>
-
-<div id="resources">
-
-<ul>
-<li>Codecademy</li>
-<li>Udacity</li>
-<li>W3Schools</li>
-</ul>
-</li></div>
-
-<div id="challenges">
-
-</div>
-
-</div><div>
 </body>
 </html>
