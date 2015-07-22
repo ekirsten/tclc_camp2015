@@ -34,11 +34,12 @@ ul#top-nav-bar {
 ul#top-nav-bar li {
 	float: left;
 	display: block;
-	border: 1px;
-	padding: 5px /*top & bottom*/ 20px /*right & left */;
+	margin: 1px;
+	padding: 4px /*top & bottom*/ 15px /*right & left */;
 	cursor: pointer;
 }
-ul#top-nav-bar li:hover {
+ul#top-nav-bar li:hover,
+ul#top-nav-bar li.selected {
 	background-color: #9CA;
 	color: black;
 	border-radius: 3px 10px;

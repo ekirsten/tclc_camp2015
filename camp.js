@@ -2,22 +2,31 @@
 // Code to enable switching from one tab in the page to another
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var currentlyVisibleTab = null;
+var currentlySelectedTab = null;
+var currentlyVisibleContent = null;
 
-// This function hides the currentlyVisibleTab and makes visible the tab whose id is idOfNewTab.
-function switchToTab(idOfNewTab) {
-	// If there is a visible tab (i.e. this is not the first time that this function is executing),
-	// hide it.
-	if (currentlyVisibleTab != null) {
-		currentlyVisibleTab.style.setProperty("display", "none", null);
+// This function hides the currentlyVisibleContent and makes visible the tab whose id is
+// idOfNewContent.
+function switchToTab(clickedTab, idOfNewContent) {
+	// If there is a visible content element (i.e. this is not the first time that this function is
+	// executing), hide it.
+	if (currentlyVisibleContent != null) {
+		currentlyVisibleContent.style.setProperty("display", "none", null);
+	}
+	// Also deselect the corresponding tab by clearing its CSS class attribute.
+	if (currentlySelectedTab != null) {
+		currentlySelectedTab.setAttribute("class", "");
 	}
 
-	// Retrieve the new tab HTML element.
-	var newTab = document.getElementById(idOfNewTab);
+	// Select the tab that was just clicked by giving it a CSS class.
+	clickedTab.setAttribute("class", "selected");
+	// Retrieve the new content HTML element.
+	var newContent = document.getElementById(idOfNewContent);
 	// Show the new tab.
-	newTab.style.setProperty("display", "block", null);
-	// Remember that newTab is now visible.
-	currentlyVisibleTab = newTab;
+	newContent.style.setProperty("display", "block", null);
+	// Remember that newContent is now visible and clickedTab is selected.
+	currentlyVisibleContent = newContent;
+	currentlySelectedTab = clickedTab;
 }
 
 
@@ -106,7 +115,7 @@ function answerCurrentQuizQuestion() {
 // which will cause our function to be executed whenever the page is accessed or refreshed.
 window.addEventListener("DOMContentLoaded", function() {
 	// Switch to the "Introduction" tab.
-	switchToTab("introduction-content-tab");
+	switchToTab(document.getElementById("introduction-tab"), "introduction-content-tab");
 
 	// Display the first image in the rotation.
 	rotateSummerImage();
